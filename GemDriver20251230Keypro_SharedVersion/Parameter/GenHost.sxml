@@ -1,0 +1,914 @@
+<SXML>
+    <DataDictionary>
+    </DataDictionary>
+    <MessageDictionary>
+        <Message Name="Are You There Request" Description="">
+            <Stream>1</Stream>
+            <Function>1</Function>
+            <WBit>1</WBit>
+            <AutoReply>Online Data</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Online Data" Description="">
+            <Stream>1</Stream>
+            <Function>2</Function>
+            <Structure>
+                <L Name="LAYER">
+                    <A Name="MDLN">
+                        <Value>RGA</Value>
+                        <Maps Type="4096">
+                        </Maps>
+                    </A>
+                    <A Name="SOFTREV">
+                        <Value>V1.1</Value>
+                        <Maps Type="4096">
+                        </Maps>
+                    </A>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Selected Equipment Status Request" Description="">
+            <Stream>1</Stream>
+            <Function>3</Function>
+            <WBit>1</WBit>
+            <AutoReply>Selected Equipment Status Data</AutoReply>
+            <Structure>
+                <L Name="LAYER">
+                    <I4 Name="CH1_Heater System_ESC_ESC Actual Temp">
+                        <Value>213600090</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH1_RF system_Source DC_Source DC Actual Power">
+                        <Value>213600304</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH1_Service_Recipe_RecipeName">
+                        <Value>213600465</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH1_SubstrateInfo_LotId">
+                        <Value>213600763</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH1_SubstrateInfo_SlotId">
+                        <Value>213600765</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH1_Vacuum System_Gauge_chamber pressure_chamberCurrentPressure">
+                        <Value>213600664</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH2_Heater System_ESC_ESC Actual Temp">
+                        <Value>213700090</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH2_RF system_Source DC_Source DC Actual Current">
+                        <Value>213700310</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH2_Service_Recipe_RecipeName">
+                        <Value>213700465</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH2_SubstrateInfo_LotId">
+                        <Value>213700763</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH2_SubstrateInfo_SlotId">
+                        <Value>213700765</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH2_Vacuum System_Gauge_chamber pressure_chamberCurrentPressure">
+                        <Value>213700664</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH3_Heater System_ESC_ESC Actual Temp">
+                        <Value>214000096</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH3_RF system_Source DC_Source DC Actual Power">
+                        <Value>214000386</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH3_Service_Recipe_RecipeName">
+                        <Value>214000575</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH3_SubstrateInfo_LotId">
+                        <Value>214000750</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH3_SubstrateInfo_SlotId">
+                        <Value>214000752</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH3_Vacuum System_Gauge_chamber pressure_chamberCurrentPressure">
+                        <Value>214000062</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH4_Heater System_ESC_ESC Actual Temp">
+                        <Value>214100096</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH4_RF system_Source DC_Source DC Actual Power">
+                        <Value>214100386</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH4_Service_Recipe_RecipeName">
+                        <Value>214100575</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH4_SubstrateInfo_LotId">
+                        <Value>214100750</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH4_SubstrateInfo_SlotId">
+                        <Value>214100752</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CH4_Vacuum System_Gauge_chamber pressure_chamberCurrentPressure">
+                        <Value>214100062</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHA_Service_Recipe_RecipeName">
+                        <Value>213200067</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHB_Service_Recipe_RecipeName">
+                        <Value>213300067</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHC_RF1_PED RFG_ActualForwardPower">
+                        <Value>213100394</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHC_RF2_Source RFG_ActualForwardPower">
+                        <Value>213100289</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHC_Service_Recipe_RecipeName">
+                        <Value>213100278</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHC_SubstrateInfo_LotId">
+                        <Value>213100503</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHC_SubstrateInfo_SlotId">
+                        <Value>213100505</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHC_Vacuumsys_Gauge_chamber pressure_chamberCurrentPressure">
+                        <Value>213100099</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHD_RF1_PED RFG_ActualForwardPower">
+                        <Value>213400394</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHD_RF2_Source RFG_ActualForwardPower">
+                        <Value>213400289</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHD_Service_Recipe_RecipeName">
+                        <Value>213400278</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHD_SubstrateInfo_LotId">
+                        <Value>213400503</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHD_SubstrateInfo_SlotId">
+                        <Value>213400505</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHD_Vacuumsys_Gauge_chamber pressure_chamberCurrentPressure">
+                        <Value>213400099</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHE_Service_Recipe_RecipeName">
+                        <Value>213000180</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHE_SubstrateInfo_LotId">
+                        <Value>213000185</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHE_SubstrateInfo_SlotId">
+                        <Value>213000187</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHE_Tempcontrol_Pedestal_Pedestal Inner Current Temp">
+                        <Value>213000064</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHE_Vacuumsys_Gauge_chamber pressure_chamberCurrentPressure">
+                        <Value>213000008</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHF_Service_Recipe_RecipeName">
+                        <Value>213500180</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHF_SubstrateInfo_LotId">
+                        <Value>213500185</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHF_SubstrateInfo_SlotId">
+                        <Value>213500187</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHF_Tempcontrol_Pedestal_Pedestal Inner Current Temp">
+                        <Value>213500064</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <I4 Name="CHF_Vacuumsys_Gauge_chamber pressure_chamberCurrentPressure">
+                        <Value>213500008</Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Selected Equipment Status Data" Description="">
+            <Stream>1</Stream>
+            <Function>4</Function>
+            <Structure/>
+        </Message>
+        <Message Name="Establish Communication Request" Description="">
+            <Stream>1</Stream>
+            <Function>13</Function>
+            <WBit>1</WBit>
+            <AutoReply>Establish Communication Request ACK</AutoReply>
+            <Structure>
+                <L Name="LAYER">
+                    <A Name="MDLN">
+                        <Value>RGA</Value>
+                        <Maps Type="4096">
+                        </Maps>
+                    </A>
+                    <A Name="SOFTREV">
+                        <Value>V1.1</Value>
+                        <Maps Type="4096">
+                        </Maps>
+                    </A>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Establish Communication Request ACK" Description="">
+            <Stream>1</Stream>
+            <Function>14</Function>
+            <Structure>
+                <L Name="LAYER">
+                    <B Name="COMMACK">
+                        <Value>00</Value>
+                        <Maps Type="1024">
+                        </Maps>
+                    </B>
+                    <L Name="LAYER">
+                        <A Name="MDLN">
+                            <Value>RGA</Value>
+                            <Maps Type="4096">
+                            </Maps>
+                        </A>
+                        <A Name="SOFTREV">
+                            <Value>V1.1</Value>
+                            <Maps Type="4096">
+                            </Maps>
+                        </A>
+                    </L>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Request Offline" Description="">
+            <Stream>1</Stream>
+            <Function>15</Function>
+            <WBit>1</WBit>
+            <AutoReply>Offline Acknowledge</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Offline Acknowledge" Description="">
+            <Stream>1</Stream>
+            <Function>16</Function>
+            <Structure>
+                <B Name="OFLACK">
+                    <Value></Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="Request Online" Description="">
+            <Stream>1</Stream>
+            <Function>17</Function>
+            <WBit>1</WBit>
+            <AutoReply>Online Acknowledge</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Online Acknowledge" Description="">
+            <Stream>1</Stream>
+            <Function>18</Function>
+            <Structure>
+                <B Name="ONLACK">
+                    <Value></Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="Equipment Constant Request" Description="">
+            <Stream>2</Stream>
+            <Function>13</Function>
+            <WBit>1</WBit>
+            <AutoReply>Equipment Constant Data</AutoReply>
+            <Structure>
+                <L>
+                    <U4 Name="CEID">
+                        <Value>100000120</Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Equipment Constant Data" Description="">
+            <Stream>2</Stream>
+            <Function>14</Function>
+            <Structure/>
+        </Message>
+        <Message Name="Date And Time Request" Description="">
+            <Stream>2</Stream>
+            <Function>17</Function>
+            <WBit>1</WBit>
+            <AutoReply>Date And Time Data</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Date And Time Data" Description="">
+            <Stream>2</Stream>
+            <Function>18</Function>
+            <Structure>
+                <A Name="TIME">
+                    <Value></Value>
+                    <Maps Type="4096">
+                    </Maps>
+                </A>
+            </Structure>
+        </Message>
+        <Message Name="Trace Initialize Send" Description="">
+            <Stream>2</Stream>
+            <Function>23</Function>
+            <WBit>1</WBit>
+            <AutoReply>Trace Initialize Acknowledge</AutoReply>
+            <Structure>
+                <L>
+                    <U4 Name="TRID">
+                        <Value></Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <U4 Name="DSPER">
+                        <Value></Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <U4 Name="TOTSMP">
+                        <Value></Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <U4 Name="REPGSZ">
+                        <Value></Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <L>
+                        <U4 Name="SVID">
+                            <Value></Value>
+                            <Maps Type="64">
+                            </Maps>
+                        </U4>
+                    </L>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Trace Initialize Acknowledge" Description="">
+            <Stream>2</Stream>
+            <Function>24</Function>
+            <Structure>
+                <I1 Name="TIAACK">
+                    <Value></Value>
+                    <Maps Type="1">
+                    </Maps>
+                </I1>
+            </Structure>
+        </Message>
+        <Message Name="Equipment Constant Namelist Request" Description="">
+            <Stream>2</Stream>
+            <Function>29</Function>
+            <WBit>1</WBit>
+            <AutoReply>Equipment Constant Namelist</AutoReply>
+            <Structure>
+                <L>
+                    <U4 Name="CEID">
+                        <Value></Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Equipment Constant Namelist" Description="">
+            <Stream>2</Stream>
+            <Function>30</Function>
+            <Structure/>
+        </Message>
+        <Message Name="Data and Time Set Request" Description="">
+            <Stream>2</Stream>
+            <Function>31</Function>
+            <WBit>1</WBit>
+            <AutoReply>Data and Time Acknowledge</AutoReply>
+            <Structure>
+                <A Name="TIME">
+                    <Value></Value>
+                    <Maps Type="4096">
+                    </Maps>
+                </A>
+            </Structure>
+        </Message>
+        <Message Name="Data and Time Acknowledge" Description="">
+            <Stream>2</Stream>
+            <Function>32</Function>
+            <Structure>
+                <B Name="TIACK">
+                    <Value></Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="Define Report" Description="">
+            <Stream>2</Stream>
+            <Function>33</Function>
+            <WBit>1</WBit>
+            <AutoReply>Define Report Acknowledge</AutoReply>
+            <Structure>
+                <L>
+                    <I4 Name="DATAID">
+                        <Value></Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <L>
+                        <L>
+                            <I4 Name="RPTID">
+                                <Value>2000</Value>
+                                <Maps Type="4">
+                                </Maps>
+                            </I4>
+                            <L>
+                                <I4>
+                                    <Value>213600090</Value>
+                                    <Maps Type="4">
+                                    </Maps>
+                                </I4>
+                            </L>
+                        </L>
+                    </L>
+                    <L>
+                        <I4>
+                            <Value>2100</Value>
+                            <Maps Type="4">
+                            </Maps>
+                        </I4>
+                        <L>
+                            <I4>
+                                <Value>213600304</Value>
+                                <Maps Type="4">
+                                </Maps>
+                            </I4>
+                        </L>
+                    </L>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Define Report Acknowledge" Description="">
+            <Stream>2</Stream>
+            <Function>34</Function>
+            <Structure>
+                <B Name="DRACK">
+                    <Value></Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="Link Event Report" Description="">
+            <Stream>2</Stream>
+            <Function>35</Function>
+            <WBit>1</WBit>
+            <AutoReply>Link Event Report Acknowledge</AutoReply>
+            <Structure>
+                <L>
+                    <I4 Name="DATAID">
+                        <Value></Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <L>
+                        <L>
+                            <I4 Name="CEID">
+                                <Value></Value>
+                                <Maps Type="4">
+                                </Maps>
+                            </I4>
+                            <L>
+                                <I4 Name="RPTID">
+                                    <Value></Value>
+                                    <Maps Type="4">
+                                    </Maps>
+                                </I4>
+                            </L>
+                        </L>
+                    </L>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Link Event Report Acknowledge" Description="">
+            <Stream>2</Stream>
+            <Function>36</Function>
+            <Structure>
+                <B Name="LRACK">
+                    <Value></Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="Enable/Disable Event Report" Description="">
+            <Stream>2</Stream>
+            <Function>37</Function>
+            <WBit>1</WBit>
+            <AutoReply>Enable/Disable Event Report Acknowledge</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Enable/Disable Event Report Acknowledge" Description="">
+            <Stream>2</Stream>
+            <Function>38</Function>
+            <Structure>
+                <B Name="ERACK">
+                    <Value>01</Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="Host Command Send" Description="">
+            <Stream>2</Stream>
+            <Function>41</Function>
+            <WBit>1</WBit>
+            <AutoReply>Host Command Acknowledge</AutoReply>
+            <Structure>
+                <L Name="RCMD">
+                    <A Name="RCMD">
+                        <Value></Value>
+                        <Maps Type="4096">
+                        </Maps>
+                    </A>
+                    <L>
+                        <L>
+                            <A Name="CPNAME1">
+                                <Value></Value>
+                                <Maps Type="4096">
+                                </Maps>
+                            </A>
+                            <U4 Name="CPVAL1">
+                                <Value></Value>
+                                <Maps Type="64">
+                                </Maps>
+                            </U4>
+                        </L>
+                    </L>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Host Command Acknowledge" Description="">
+            <Stream>2</Stream>
+            <Function>42</Function>
+            <Structure>
+                <L>
+                    <B Name="HCACK">
+                        <Value></Value>
+                        <Maps Type="1024">
+                        </Maps>
+                    </B>
+                    <L>
+                        <A Name="CPNAME">
+                            <Value></Value>
+                            <Maps Type="4096">
+                            </Maps>
+                        </A>
+                        <B Name="CPACK">
+                            <Value></Value>
+                            <Maps Type="1024">
+                            </Maps>
+                        </B>
+                    </L>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Alarm Report Send" Description="">
+            <Stream>5</Stream>
+            <Function>1</Function>
+            <WBit>1</WBit>
+            <AutoReply>Alarm Acknowledge</AutoReply>
+            <Structure>
+                <L Name="LAYER">
+                    <B Name="ALCD">
+                        <Value></Value>
+                        <Maps Type="1024">
+                        </Maps>
+                    </B>
+                    <I4 Name="ALID">
+                        <Value></Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <A Name="ALTX">
+                        <Value></Value>
+                        <Maps Type="4096">
+                        </Maps>
+                    </A>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Alarm Acknowledge" Description="">
+            <Stream>5</Stream>
+            <Function>2</Function>
+            <Structure>
+                <B Name="ACKC5">
+                    <Value></Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="Enable/Disable Alarm Send" Description="">
+            <Stream>5</Stream>
+            <Function>3</Function>
+            <WBit>1</WBit>
+            <Structure>
+                <L Name="ALED">
+                    <U4 Name="ALED">
+                        <Value></Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <U4 Name="ALID">
+                        <Value></Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Enable/Disable Alarm Acknowledge" Description="">
+            <Stream>5</Stream>
+            <Function>4</Function>
+            <Structure>
+                <B Name="ACKC5">
+                    <Value></Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="List Alarms Request" Description="">
+            <Stream>5</Stream>
+            <Function>5</Function>
+            <WBit>1</WBit>
+            <AutoReply>List Alarm Data</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="List Alarm Data" Description="">
+            <Stream>5</Stream>
+            <Function>6</Function>
+            <Structure>
+                <L>
+                    <B Name="ALCD">
+                        <Value></Value>
+                        <Maps Type="1024">
+                        </Maps>
+                    </B>
+                    <U4 Name="ALID">
+                        <Value></Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <A Name="ALTX">
+                        <Value></Value>
+                        <Maps Type="4096">
+                        </Maps>
+                    </A>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="List Enabled Alarm Request" Description="">
+            <Stream>5</Stream>
+            <Function>7</Function>
+            <WBit>1</WBit>
+            <AutoReply>List Enabled Alarm Data</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="List Enabled Alarm Data" Description="">
+            <Stream>5</Stream>
+            <Function>8</Function>
+            <Structure>
+                <L>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Trace Data Send" Description="">
+            <Stream>6</Stream>
+            <Function>1</Function>
+            <WBit>1</WBit>
+            <AutoReply>Trace Datan Acknowledge</AutoReply>
+            <Structure>
+                <L>
+                    <U4 Name="TRID">
+                        <Value></Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <U4 Name="SMPLN">
+                        <Value></Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <U4 Name="STIME">
+                        <Value></Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <L>
+                        <U4 Name="SV">
+                            <Value></Value>
+                            <Maps Type="64">
+                            </Maps>
+                        </U4>
+                    </L>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Trace Datan Acknowledge" Description="">
+            <Stream>6</Stream>
+            <Function>2</Function>
+            <Structure>
+                <U4 Name="ACKC6">
+                    <Value></Value>
+                    <Maps Type="64">
+                    </Maps>
+                </U4>
+            </Structure>
+        </Message>
+        <Message Name="Event Report Send" Description="">
+            <Stream>6</Stream>
+            <Function>11</Function>
+            <WBit>1</WBit>
+            <AutoReply>Event Report Acknowledge</AutoReply>
+            <Structure>
+                <L>
+                    <U4 Name="DATAID">
+                        <Value></Value>
+                    </U4>
+                    <U4 Name="CEID">
+                        <Value></Value>
+                    </U4>
+                    <L>
+                        <U4 Name="PPTID">
+                            <Value></Value>
+                        </U4>
+                    </L>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Event Report Acknowledge" Description="">
+            <Stream>6</Stream>
+            <Function>12</Function>
+            <Structure>
+                <B Name="ACKC6">
+                    <Value>00</Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="Event Report Request" Description="">
+            <Stream>6</Stream>
+            <Function>15</Function>
+            <WBit>1</WBit>
+            <AutoReply>Event Report Data</AutoReply>
+            <Structure>
+                <U4 Name="CEID">
+                    <Value></Value>
+                    <Maps Type="64">
+                    </Maps>
+                </U4>
+            </Structure>
+        </Message>
+        <Message Name="Event Report Data" Description="">
+            <Stream>6</Stream>
+            <Function>16</Function>
+            <Structure/>
+        </Message>
+        <Message Name="Individual Report Request" Description="">
+            <Stream>6</Stream>
+            <Function>19</Function>
+            <WBit>1</WBit>
+            <AutoReply>Individual Report Data</AutoReply>
+            <Structure>
+                <U4 Name="RPTID">
+                    <Value></Value>
+                    <Maps Type="64">
+                    </Maps>
+                </U4>
+            </Structure>
+        </Message>
+        <Message Name="Individual Report Data" Description="">
+            <Stream>6</Stream>
+            <Function>20</Function>
+            <Structure/>
+        </Message>
+        <Message Name="Current EPPD Request" Description="">
+            <Stream>7</Stream>
+            <Function>19</Function>
+            <WBit>1</WBit>
+            <AutoReply>Current EPPD Data</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Current EPPD Data" Description="">
+            <Stream>7</Stream>
+            <Function>20</Function>
+            <Structure>
+                <L Name="LAYER">
+                    <U4>
+                        <Value>1100</Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <U4>
+                        <Value>11111</Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                </L>
+            </Structure>
+        </Message>
+    </MessageDictionary>
+</SXML>

@@ -1,0 +1,413 @@
+<SXML>
+    <DataDictionary>
+    </DataDictionary>
+    <MessageDictionary>
+        <Message Name="Are You There Request" Description="">
+            <Stream>1</Stream>
+            <Function>1</Function>
+            <WBit>1</WBit>
+            <AutoReply>Online Data</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Online Data" Description="">
+            <Stream>1</Stream>
+            <Function>2</Function>
+            <Structure>
+                <L Name="LAYER">
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Selected Equipment Status Request" Description="">
+            <Stream>1</Stream>
+            <Function>3</Function>
+            <WBit>1</WBit>
+            <AutoReply>Selected Equipment Status Data</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Selected Equipment Status Data" Description="">
+            <Stream>1</Stream>
+            <Function>4</Function>
+            <Structure>
+                <L>
+                    <U4>
+                        <Value>11</Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <U4>
+                        <Value>12</Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Establish Communication Request" Description="">
+            <Stream>1</Stream>
+            <Function>13</Function>
+            <WBit>1</WBit>
+            <AutoReply>Establish Communication Request ACK</AutoReply>
+            <Structure>
+                <L Name="LAYER">
+                    <A Name="MDLN">
+                        <Value></Value>
+                        <Maps Type="4096">
+                        </Maps>
+                    </A>
+                    <A Name="SOFTREV">
+                        <Value>V1.1</Value>
+                        <Maps Type="4096">
+                        </Maps>
+                    </A>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Establish Communication Request ACK" Description="">
+            <Stream>1</Stream>
+            <Function>14</Function>
+            <Structure>
+                <L Name="LAYER">
+                    <B Name="COMMACK">
+                        <Value></Value>
+                        <Maps Type="1024">
+                        </Maps>
+                    </B>
+                    <L Name="LAYER">
+                        <A Name="MDLN">
+                            <Value>10</Value>
+                            <Maps Type="4096">
+                            </Maps>
+                        </A>
+                        <A Name="SOFTREV">
+                            <Value>11</Value>
+                            <Maps Type="4096">
+                            </Maps>
+                        </A>
+                    </L>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Request Offline" Description="">
+            <Stream>1</Stream>
+            <Function>15</Function>
+            <WBit>1</WBit>
+            <AutoReply>Offline Acknowledge</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Offline Acknowledge" Description="">
+            <Stream>1</Stream>
+            <Function>16</Function>
+            <Structure>
+                <B Name="OFLACK">
+                    <Value></Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="Request Online" Description="">
+            <Stream>1</Stream>
+            <Function>17</Function>
+            <WBit>1</WBit>
+            <AutoReply>Online Acknowledge</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Online Acknowledge" Description="">
+            <Stream>1</Stream>
+            <Function>18</Function>
+            <Structure>
+                <B Name="ONLACK">
+                    <Value></Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="Equipment Constant Request" Description="">
+            <Stream>2</Stream>
+            <Function>13</Function>
+            <WBit>1</WBit>
+            <Structure>
+                <L>
+                    <U4>
+                        <Value>109900022</Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <U4>
+                        <Value>10010</Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <U4>
+                        <Value>109900397</Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <U4>
+                        <Value>109920024</Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <U4>
+                        <Value>109900214</Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <U4>
+                        <Value>109900037</Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <U4>
+                        <Value>109900027</Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Equipment Constant Data" Description="">
+            <Stream>2</Stream>
+            <Function>14</Function>
+            <Structure/>
+        </Message>
+        <Message Name="Date And Time Request" Description="">
+            <Stream>2</Stream>
+            <Function>17</Function>
+            <WBit>1</WBit>
+            <AutoReply>Date And Time Data</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Date And Time Data" Description="">
+            <Stream>2</Stream>
+            <Function>18</Function>
+            <Structure>
+                <A Name="Time">
+                    <Value></Value>
+                    <Maps Type="4096">
+                    </Maps>
+                </A>
+            </Structure>
+        </Message>
+        <Message Name="Define Report" Description="">
+            <Stream>2</Stream>
+            <Function>33</Function>
+            <WBit>1</WBit>
+            <AutoReply>Define Report Acknowledge</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Define Report Acknowledge" Description="">
+            <Stream>2</Stream>
+            <Function>34</Function>
+            <Structure>
+                <B Name="DRACK">
+                    <Value></Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="Link Event Report" Description="">
+            <Stream>2</Stream>
+            <Function>35</Function>
+            <WBit>1</WBit>
+            <AutoReply>Link Event Report Acknowledge</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Link Event Report Acknowledge" Description="">
+            <Stream>2</Stream>
+            <Function>36</Function>
+            <Structure>
+                <B Name="LRACK">
+                    <Value></Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="Enable/Disable Event Report" Description="">
+            <Stream>2</Stream>
+            <Function>37</Function>
+            <WBit>1</WBit>
+            <AutoReply>Enable/Disable Event Report Acknowledge</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Enable/Disable Event Report Acknowledge" Description="">
+            <Stream>2</Stream>
+            <Function>38</Function>
+            <Structure>
+                <B Name="ERACK">
+                    <Value>01</Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="S2F41" Description="">
+            <Stream>2</Stream>
+            <Function>41</Function>
+            <WBit>1</WBit>
+            <AutoReply>S2F42</AutoReply>
+            <Structure>
+                <L>
+                    <A Name="Status">
+                        <Value></Value>
+                        <Maps Type="4096">
+                        </Maps>
+                    </A>
+                    <L>
+                        <L>
+                            <A Name="StationID">
+                                <Value></Value>
+                                <Maps Type="4096">
+                                </Maps>
+                            </A>
+                            <A Name="chamber">
+                                <Value></Value>
+                                <Maps Type="4096">
+                                </Maps>
+                            </A>
+                        </L>
+                    </L>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="S2F42" Description="">
+            <Stream>2</Stream>
+            <Function>42</Function>
+            <Structure>
+                <L>
+                    <B>
+                        <Value>01</Value>
+                        <Maps Type="1024">
+                        </Maps>
+                    </B>
+                    <L>
+                    </L>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Alarm Report Send" Description="">
+            <Stream>5</Stream>
+            <Function>1</Function>
+            <WBit>1</WBit>
+            <AutoReply>Alarm Acknowledge</AutoReply>
+            <Structure>
+                <L Name="LAYER">
+                    <B Name="ALCD">
+                        <Value></Value>
+                        <Maps Type="1024">
+                        </Maps>
+                    </B>
+                    <I4 Name="ALID">
+                        <Value></Value>
+                        <Maps Type="4">
+                        </Maps>
+                    </I4>
+                    <A Name="ALTX">
+                        <Value></Value>
+                        <Maps Type="4096">
+                        </Maps>
+                    </A>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Alarm Acknowledge" Description="">
+            <Stream>5</Stream>
+            <Function>2</Function>
+            <Structure>
+                <B Name="ACKC5">
+                    <Value></Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="Enable/Disable Alarm Send" Description="">
+            <Stream>5</Stream>
+            <Function>3</Function>
+            <WBit>1</WBit>
+            <Structure>
+                <L>
+                    <B Name="ALED">
+                        <Value></Value>
+                        <Maps Type="1024">
+                        </Maps>
+                    </B>
+                    <U4 Name="ALID">
+                        <Value></Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                </L>
+            </Structure>
+        </Message>
+        <Message Name="Enable/Disable Alarm Acknowledge" Description="">
+            <Stream>5</Stream>
+            <Function>4</Function>
+            <Structure/>
+        </Message>
+        <Message Name="Event Report Send" Description="">
+            <Stream>6</Stream>
+            <Function>11</Function>
+            <WBit>1</WBit>
+            <AutoReply>Event Report Acknowledge</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Event Report Acknowledge" Description="">
+            <Stream>6</Stream>
+            <Function>12</Function>
+            <Structure>
+                <B Name="ACKC6">
+                    <Value>00</Value>
+                    <Maps Type="1024">
+                    </Maps>
+                </B>
+            </Structure>
+        </Message>
+        <Message Name="Individual Report Request" Description="">
+            <Stream>6</Stream>
+            <Function>19</Function>
+            <WBit>1</WBit>
+            <AutoReply>Individual Report Data</AutoReply>
+            <Structure>
+                <U4 Name="RPTID">
+                    <Value></Value>
+                    <Maps Type="64">
+                    </Maps>
+                </U4>
+            </Structure>
+        </Message>
+        <Message Name="Individual Report Data" Description="">
+            <Stream>6</Stream>
+            <Function>20</Function>
+            <Structure/>
+        </Message>
+        <Message Name="Current EPPD Request" Description="">
+            <Stream>7</Stream>
+            <Function>19</Function>
+            <WBit>1</WBit>
+            <AutoReply>Current EPPD Data</AutoReply>
+            <Structure/>
+        </Message>
+        <Message Name="Current EPPD Data" Description="">
+            <Stream>7</Stream>
+            <Function>20</Function>
+            <Structure>
+                <L Name="LAYER">
+                    <U4>
+                        <Value>1100</Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                    <U4>
+                        <Value>11111</Value>
+                        <Maps Type="64">
+                        </Maps>
+                    </U4>
+                </L>
+            </Structure>
+        </Message>
+    </MessageDictionary>
+</SXML>
