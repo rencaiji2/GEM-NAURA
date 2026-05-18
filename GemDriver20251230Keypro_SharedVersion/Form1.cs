@@ -673,7 +673,7 @@ namespace GemDriver
                         countEQ_S2F35 = 0;
                         SECS.EQ.S2F35_SendCommandNEW(SECS.EQ.gRPTID_EQ[indexEQ_S2F35], true);
                     }
-                    ++countEQ_S2F33;
+                    ++countEQ_S2F35;
                     return false;
                 }
                 for (int i = 0; i < SECS.EQ.gRPTID_EQ.Count; i++)
@@ -704,7 +704,7 @@ namespace GemDriver
                         countEQ_S2F37 = 0;
                         SECS.EQ.S2F37_SendCommandNEW(SECS.EQ.gRPTID_EQ[indexEQ_S2F37], true);
                     }
-                    ++countEQ_S2F33;
+                    ++countEQ_S2F37;
                     return false;
                 }
                 for (int i = 0; i < SECS.EQ.gRPTID_EQ.Count; i++)
