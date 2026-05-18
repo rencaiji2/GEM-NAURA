@@ -21,7 +21,7 @@ namespace GemDriver
         public static bool RecipeName_Flag = false;
 
         public static bool TCP_IP_Status = false;
-        //public static bool TCP_IPSV_Status = false;
+        public static bool TCP_IPSV_Status = false;
 
         public static string EQ_Name = "";
         public static string EQ_SIF3_Time = "";

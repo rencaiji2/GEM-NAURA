@@ -29,7 +29,7 @@ namespace GemDriver
         }
 
         CNCVision.Communicate Communicate;
-        //CNCVision.Communicate CommunicateSV;
+        CNCVision.Communicate CommunicateSV;
 
         public System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
         System.Threading.Thread GUI_RefreshThread;
@@ -128,8 +128,8 @@ namespace GemDriver
             Equipment_DisConnect();
             Communicate.ConnectedResult -= _tcpcomm_ConnectedResult;
             Communicate.MessageReceived -= _tcpcomm_MessageReceived;
-            //CommunicateSV.ConnectedResult -= _tcpcomm_ConnectedResultSV;
-            //CommunicateSV.MessageReceived -= _tcpcomm_MessageReceivedSV;
+            CommunicateSV.ConnectedResult -= _tcpcomm_ConnectedResultSV;
+            CommunicateSV.MessageReceived -= _tcpcomm_MessageReceivedSV;
             Environment.Exit(0);
         }
         private void InitialDialog()
@@ -139,7 +139,7 @@ namespace GemDriver
             Global.SystemParameterIni.SetFilePath(Global.WorkDir + "Parameter" + "/" + "ParameterIni.Ini");
 
             Global.EQ_Name = Global.SystemParameterIni.GetString("Cofig", "EQ_Name", "0");
-            Global.EQ_SIF3_Time = Global.SystemParameterIni.GetString("Cofig", "EQ_SIF3_Time", "100");
+            Global.EQ_SIF3_Time = Global.SystemParameterIni.GetString("Cofig", "EQ_SIF3_Time", "200");
 
             CNCVision.CtrDisplay.ShowText(textBox3, Global.EQ_SIF3_Time);
             if (Global.EQ_Name == "0")
@@ -286,34 +286,34 @@ namespace GemDriver
             }
         }
 
-        //public void TCP_ConnectSV()
-        //{
-        //    try
-        //    {
-        //        switch ("Server")
-        //        {
-        //            case "Server":
-        //                {
-        //                    CommunicateSV = new CNCVision.Communicate(CNCVision.Communicate.NetBehavior.Server, "127.0.0.1", 6001);
-        //                    break;
-        //                }
-        //            case "Client":
-        //                {
-        //                    //  Communicate = new CNCVision.Communicate(CNCVision.Communicate.NetBehavior.Client, "192.168.0.01",8001);
-        //                    break;
-        //                }
-        //        }
+        public void TCP_ConnectSV()
+        {
+            try
+            {
+                switch ("Server")
+                {
+                    case "Server":
+                        {
+                            CommunicateSV = new CNCVision.Communicate(CNCVision.Communicate.NetBehavior.Server, "127.0.0.1", 6001);
+                            break;
+                        }
+                    case "Client":
+                        {
+                            //  Communicate = new CNCVision.Communicate(CNCVision.Communicate.NetBehavior.Client, "192.168.0.01",8001);
+                            break;
+                        }
+                }
 
-        //        CommunicateSV.ConnectedResult += _tcpcomm_ConnectedResultSV;
-        //        //CommunicateSV.MessageReceived += _tcpcomm_MessageReceivedSV;
-        //        Global.DisplayInfo("SECS TCP Link SV。");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        //MessageBox.Show(ex.ToString() + "网络连接失败！"); 
-        //        Global.DisplayInfo("SECS TCP Link Fail!。");
-        //    }
-        //}
+                CommunicateSV.ConnectedResult += _tcpcomm_ConnectedResultSV;
+                CommunicateSV.MessageReceived += _tcpcomm_MessageReceivedSV;
+                Global.DisplayInfo("SECS TCP Link SV。");
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.ToString() + "网络连接失败！"); 
+                Global.DisplayInfo("SECS TCP Link Fail!。");
+            }
+        }
         #endregion
         #region "SECS GEM離線"
         private void Host_DisConnect()
@@ -1107,17 +1107,17 @@ namespace GemDriver
             }
         }
 
-        //void _tcpcomm_ConnectedResultSV(object sender, CNCVision.Communicate.ResultEventArgs e)
-        //{
-        //    if (e.conResult)
-        //    {
-        //        Global.TCP_IPSV_Status = true;
-        //    }
-        //    else
-        //    {
-        //        Global.TCP_IPSV_Status = false;
-        //    }
-        //}
+        void _tcpcomm_ConnectedResultSV(object sender, CNCVision.Communicate.ResultEventArgs e)
+        {
+            if (e.conResult)
+            {
+                Global.TCP_IPSV_Status = true;
+            }
+            else
+            {
+                Global.TCP_IPSV_Status = false;
+            }
+        }
 
         void _tcpcomm_MessageReceived(object sender, CNCVision.Communicate.MessageEventArgs e)
         {
@@ -1227,24 +1227,24 @@ namespace GemDriver
             { Global.DisplayInfo("TCP 接受数据解析失败，" + ex.ToString()); }
         }
 
-        //void _tcpcomm_MessageReceivedSV(object sender, CNCVision.Communicate.MessageEventArgs e)
-        //{
-        //    try
-        //    {
-        //        Global.TCP_MessagelistSV = e.Message.Split(new string[] { "\r\n" }, StringSplitOptions.None);
-        //        foreach (string line in Global.TCP_MessagelistSV)
-        //        {
-        //            Global.TCP_MessageSV = line.Split(',');
-        //            if(Global.TCP_MessageSV[0]=="S2F41" && Global.TCP_MessageSV[4] == "1")
-        //            {
-        //                SECS.EQ.S2F41_SendCommand(Global.TCP_MessageSV[1], Global.TCP_MessageSV[2], Global.TCP_MessageSV[3]);
-        //            }
-        //        }
+        void _tcpcomm_MessageReceivedSV(object sender, CNCVision.Communicate.MessageEventArgs e)
+        {
+            try
+            {
+                Global.TCP_MessagelistSV = e.Message.Split(new string[] { "\r\n" }, StringSplitOptions.None);
+                foreach (string line in Global.TCP_MessagelistSV)
+                {
+                    Global.TCP_MessageSV = line.Split(',');
+                    if (Global.TCP_MessageSV[0] == "S2F41" && Global.TCP_MessageSV[4] == "1")
+                    {
+                        SECS.EQ.S2F41_SendCommand(Global.TCP_MessageSV[1], Global.TCP_MessageSV[2], Global.TCP_MessageSV[3]);
+                    }
+                }
 
-        //    }
-        //    catch (Exception ex)
-        //    { Global.DisplayInfo("TCP 接受数据解析失败，" + ex.ToString()); }
-        //}
+            }
+            catch (Exception ex)
+            { Global.DisplayInfo("TCP 接受数据解析失败，" + ex.ToString()); }
+        }
         #endregion
 
         #region  "数据更新方法"
